@@ -73,7 +73,7 @@ jobs:
 
   build_project_and_sonar_scan:
     runs-on: ubuntu-latest
-    needs: [security-checks, unit_test]
+    needs: [security-checks, unit_test, dependency-review]
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
