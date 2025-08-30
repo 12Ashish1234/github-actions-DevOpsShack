@@ -9,6 +9,9 @@ on:
       - "pom.xml"
       - ".github/workflows/**"
 
+permissions:
+  contents: read
+
 jobs:
   compile:
     runs-on: ubuntu-latest
@@ -46,6 +49,14 @@ jobs:
         run: sudo apt install gitleaks -y
       - name: gitleaks scan
         run: gitleaks detect source . -r gitleaks-report.json -f json
+
+  dependency-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout Repository"
+        uses: actions/checkout@v4
+      - name: "Dependency Review"
+        uses: actions/dependency-review-action@v4
 
   unit_test:
     runs-on: ubuntu-latest
