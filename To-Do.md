@@ -1,4 +1,4 @@
-# Complete this project:
+# Complete this project :
 
 A highly impactful **DevSecOps project using GitHub Actions** is to build a “Comprehensive Secure CI/CD Pipeline” for a modern application, fully integrating security controls and best practices at every stage—from code commit to production deployment—using both open source and cloud-native tools.[1][2][3]
 
